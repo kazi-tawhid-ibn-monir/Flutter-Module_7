@@ -13,10 +13,12 @@ void main() {
           ),
         ),
       ),
-      body: Column(
-        children: [
-          Center(
-            child: ElevatedButton(
+      body: SingleChildScrollView(
+        scrollDirection: Axis.vertical,
+        child: Column(
+          children: [
+            Center(
+              child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.green,
                     shape: RoundedRectangleBorder(
@@ -24,26 +26,122 @@ void main() {
                 onPressed: () {
                   print("This isa ElevatedButton");
                 },
-                child: Row(
-                  children: [
-                    Icon(
-                      Icons.send,
-                      size: 25,
-                      color: Colors.red,
-                    ),
-                    Text(
-                      "Send",
-                      style: TextStyle(color: Colors.white, fontSize: 25),
-                    ),
-                  ],
+                child: Text(
+                  "Send",
+                  style: TextStyle(color: Colors.white, fontSize: 25),
+                ),
+              ),
+            ),
+            Icon(
+              Icons.add_a_photo,
+              size: 30,
+              color: Colors.cyan,
+            ),
+            TextButton(
+                onPressed: () {
+                  print("I am Text Button");
+                },
+                child: Text(
+                  "Click me",
+                  style: TextStyle(color: Colors.blue, fontSize: 25),
                 )),
-          ),
-          Icon(
-            Icons.add_a_photo,
-            size: 25,
-            color: Colors.cyan,
-          )
-        ],
+            IconButton(
+                onPressed: () {
+                  print("Im Icon Button");
+                },
+                icon: Icon(
+                  Icons.add_a_photo,
+                  size: 50,
+                  color: Colors.red,
+                )),
+            InkWell(
+              onTap: () {
+                print("Im Inkwell");
+              },
+              onHover: (value) {
+                print("Im inkwell hover"); //only for pc mouse
+              },
+              onLongPress: () {
+                print("Im inkwell longpress");
+              },
+              child: Container(
+                height: 150,
+                width: 150,
+                margin: EdgeInsets.only(top: 50),
+                alignment: Alignment.center,
+                // padding: EdgeInsets.all(30),
+                decoration: BoxDecoration(
+                    color: Colors.deepPurple,
+                    borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(20),
+                        bottomRight: Radius.circular(20)),
+                    border: Border.all(color: Colors.black, width: 5),
+                    gradient: LinearGradient(
+                      colors: [
+                        Colors.green.shade100,
+                        Colors.black.withOpacity(0.9),
+                        Colors.red,
+                        Colors.white
+                      ],
+                      begin: Alignment.topLeft,
+                      end: Alignment.bottomRight,
+                    ),
+                    boxShadow: [
+                      BoxShadow(
+                          color: Colors.green,
+                          blurRadius: 10,
+                          spreadRadius: 5,
+                          offset: Offset(5, 5))
+                    ]),
+                child: Text("This is a Container",
+                    style: TextStyle(color: Colors.white, fontSize: 25)),
+              ),
+            ),
+            GestureDetector(
+              onTap: () {
+                print("Im Inkwell");
+              },
+              onLongPress: () {
+                print("Im inkwell longpress");
+              },
+              onDoubleTap: () {
+                print("im double clicable");
+              },
+              child: Container(
+                height: 150,
+                width: 150,
+                margin: EdgeInsets.only(top: 50),
+                alignment: Alignment.center,
+                // padding: EdgeInsets.all(30),
+                decoration: BoxDecoration(
+                    color: Colors.deepPurple,
+                    borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(20),
+                        bottomRight: Radius.circular(20)),
+                    border: Border.all(color: Colors.black, width: 5),
+                    gradient: LinearGradient(
+                      colors: [
+                        Colors.white,
+                        Colors.blueAccent.withOpacity(0.9),
+                        Colors.amber,
+                        Colors.tealAccent
+                      ],
+                      begin: Alignment.topLeft,
+                      end: Alignment.bottomRight,
+                    ),
+                    boxShadow: [
+                      BoxShadow(
+                          color: Colors.green,
+                          blurRadius: 10,
+                          spreadRadius: 5,
+                          offset: Offset(5, 5))
+                    ]),
+                child: Text("This is a Container",
+                    style: TextStyle(color: Colors.white, fontSize: 25)),
+              ),
+            )
+          ],
+        ),
       ),
     ),
   ));
