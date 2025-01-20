@@ -22,19 +22,27 @@ void main() {
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(15))),
                 onPressed: () {
-                  print("Button pressd");
+                  print("This isa ElevatedButton");
                 },
                 child: Row(
                   children: [
+                    Icon(
+                      Icons.send,
+                      size: 25,
+                      color: Colors.red,
+                    ),
                     Text(
                       "Send",
-                      style: TextStyle(color: Colors.white,fontSize: 25),
+                      style: TextStyle(color: Colors.white, fontSize: 25),
                     ),
-                    Icon(Icons.send)
                   ],
                 )),
           ),
-          Icon(Icons.person,size: 25,color: Colors.cyan,)
+          Icon(
+            Icons.add_a_photo,
+            size: 25,
+            color: Colors.cyan,
+          )
         ],
       ),
     ),
