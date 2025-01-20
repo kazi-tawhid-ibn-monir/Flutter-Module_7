@@ -18,15 +18,20 @@ void main() {
           Center(
             child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.red,
+                    backgroundColor: Colors.green,
                     shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(5))),
+                        borderRadius: BorderRadius.circular(15))),
                 onPressed: () {
                   print("Button pressd");
                 },
-                child: Text(
-                  "Button",
-                  style: TextStyle(color: Colors.white,fontSize: 25),
+                child: Row(
+                  children: [
+                    Text(
+                      "Send",
+                      style: TextStyle(color: Colors.white,fontSize: 25),
+                    ),
+                    Icon(Icons.send)
+                  ],
                 )),
           ),
           Icon(Icons.person,size: 25,color: Colors.cyan,)
