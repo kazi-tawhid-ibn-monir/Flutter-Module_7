@@ -17,19 +17,17 @@ void main() {
         scrollDirection: Axis.vertical,
         child: Column(
           children: [
-            Center(
-              child: ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.green,
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(15))),
-                onPressed: () {
-                  print("This isa ElevatedButton");
-                },
-                child: Text(
-                  "Send",
-                  style: TextStyle(color: Colors.white, fontSize: 25),
-                ),
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.green,
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(15))),
+              onPressed: () {
+                print("This isa ElevatedButton");
+              },
+              child: Text(
+                "Send",
+                style: TextStyle(color: Colors.white, fontSize: 25),
               ),
             ),
             Icon(
