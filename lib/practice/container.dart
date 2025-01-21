@@ -15,6 +15,14 @@ void main() {
           Container(
             height: 150,
             width: 150,
+            color: Colors.green,
+            child: Center(
+              child: Text("Hi"),
+            ),
+          ),
+          Container(
+            height: 150,
+            width: 150,
             margin: EdgeInsets.all(20),
             alignment: Alignment.center,
             decoration: BoxDecoration(
@@ -26,6 +34,9 @@ void main() {
                 Colors.green,
                 Colors.blue,
               ], begin: Alignment.topLeft, end: Alignment.bottomRight),
+            ),
+            child: Center(
+              child: Text("Hi"),
             ),
           )
         ],

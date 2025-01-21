@@ -13,42 +13,16 @@ void main() {
       centerTitle: true,
     ),
     body: Column(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        ElevatedButton(
-            style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.teal,
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(15))),
-            onPressed: () {
-              print("This is a elevated button");
-            },
-            child: Text("Send",style: TextStyle(fontSize: 20,color: Colors.white),)),
-        Column(
-          children: [
-          TextButton(
-              onPressed: () {
-                print("This is a Text Button");
-              },
-              child: Text("Click me",style: TextStyle(fontSize: 20,color: Colors.green),)),
-        ],
-        ),
-        Column(
-          children: [
-          IconButton(
-              onPressed: () {
-                print("This is a Icon Button");
-              },
-              icon: Icon(Icons.add_a_photo,size: 50,color: Colors.green,)),
-        ],
-        ),
-        Container(
-          height: 150,
-          width: 150,
-          margin: EdgeInsets.all(20),
-          alignment: Alignment.center,
-          decoration: BoxDecoration(
+        Center(
+          child: Container(
+            height: 150,
+            width: 150,
             color: Colors.green,
-            borderRadius: BorderRadius.circular(15),
+            child: Center(
+              child: Text("Hi"),
+            ),
           ),
         )
       ],
